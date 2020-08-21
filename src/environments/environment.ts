@@ -5,7 +5,7 @@
 export const environment = {
   production: false,
   http: {
-    saveData: ''
+    saveData: 'http://localhost:3000/data'
   }
 };
 
