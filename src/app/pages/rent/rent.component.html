@@ -1,0 +1,43 @@
+<!-- header -->
+<app-header></app-header>
+
+<div class="row">
+  <!-- body -->
+  <section id="section-body-rent">
+    <!-- image background container -->
+    <div class="container-background-title">
+    </div>
+
+    <!-- form container -->
+    <div class="container-form offset-1 col-10 col-md-4 offset-md-7">
+      <div class="container p-3 my-3 bg-white text-dark shadow-lg rounded">
+        <div class="row">
+          <div class="col-12">
+            <form [formGroup]="rentForm" (ngSubmit)="onSubmit()">
+              <h3 class="title">
+                <span class="color">Ayúdanos</span> con unos datos más
+              </h3>
+              <p class="description">
+                Por que te queremos dar una oferta a la medida para ti, necesitamos saber un poco más.
+              </p>
+
+              <!-- RUT container -->
+              <div class="container-input">
+                <label>¿Cuál es tu renta líquida/ingreso mensual?</label>
+                <input class="form-control" type="text"
+                       formControlName="rent" placeholder="Ej: $400.000">
+              </div>
+
+              <!-- button submit -->
+              <button type="submit" class="btn btn-success form-control"
+                      [disabled]="rentForm.invalid">
+                CONTINUAR
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+</div>

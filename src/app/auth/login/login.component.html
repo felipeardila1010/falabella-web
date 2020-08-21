@@ -1,0 +1,64 @@
+<!-- header -->
+<app-header></app-header>
+
+<div class="row">
+  <!-- body -->
+  <section id="section-body-login">
+    <!-- image background container -->
+    <div class="container-background-title">
+      <h1 class="title-1">Tu Cuenta Corriente</h1>
+      <h1 class="title-2">100% on line</h1>
+    </div>
+
+    <!-- data container -->
+    <div class="container-data-information col-6">
+      <app-login-data-information></app-login-data-information>
+    </div>
+
+    <!-- form container -->
+    <div class="container-form offset-1 col-10 col-md-4 offset-md-7">
+      <div class="container p-3 my-3 bg-white text-dark shadow-lg rounded">
+        <div class="row">
+          <div class="col-12">
+            <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+              <h3 class="title">
+                <span class="color">Ingresa</span> tus datos
+              </h3>
+              <p class="description">
+                Solo necesitas tener tu cédula para realizar la solicitud.
+              </p>
+
+              <!-- RUT container -->
+              <div class="container-input">
+                <label>Rut</label>
+                <input class="form-control" type="text"
+                       formControlName="rut" placeholder="Ej: 11.111.111-1">
+              </div>
+
+              <!-- RUT container -->
+              <div class="container-input">
+                <label>Celular</label>
+                <input class="form-control" type="text"
+                       formControlName="cellphone" placeholder="Ej: 987654321">
+              </div>
+
+              <!-- RUT container -->
+              <div class="container-input">
+                <label>Correo Electrónico</label>
+                <input class="form-control" type="text"
+                       formControlName="email" placeholder="Ej: correo@correo.cl">
+              </div>
+
+              <!-- button submit -->
+              <button type="submit" class="btn btn-success form-control"
+                      [disabled]="loginForm.invalid">
+                CONTINUAR
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+</div>

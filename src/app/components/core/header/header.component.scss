@@ -1,0 +1,19 @@
+nav {
+  position: inherit;
+
+  & .row {
+    background: #fff;
+  }
+
+  & div.container-menu {
+    & span {
+      font-size: large;
+    }
+  }
+
+  & div.container-logo {
+    & img#logo-falabella {
+      width: 15vh;
+    }
+  }
+}

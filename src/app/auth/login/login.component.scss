@@ -1,0 +1,111 @@
+section {
+  &#section-body-login {
+    background-image: url(/assets/app/auth/login/background.jpg);
+    background-color: #cccccc;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    width: 100%;
+  }
+
+  & div.container-background-title {
+    color: #ffffff;
+
+    & .title-1 {
+      font-weight: 200;
+    }
+
+    & .title-2 {
+      font-weight: 400;
+    }
+  }
+
+  & div.container-data-information {
+    margin-top: 20em;
+    position: absolute;
+    display: block;
+  }
+
+  & div.container-form {
+    opacity: 1;
+
+    & p, label {
+      font-size: 0.9rem;
+      margin-bottom: 0.3rem;
+    }
+
+    & form {
+      & .title {
+        font-weight: 300;
+        font-size: 1.6em;
+        margin-bottom: 36px;
+
+        & .color {
+          color: green;
+        }
+      }
+
+      & .description {
+        margin-bottom: 2rem;
+      }
+
+      & .container-input {
+        margin-bottom: 2rem;
+      }
+    }
+  }
+}
+
+/* For devices 300px and 700px: */
+@media only screen and (min-device-width: 300px) and (max-device-width: 700px) {
+  section {
+    &#section-body-login {
+      height: 30vh;
+    }
+
+    & div.container-background-title {
+      text-align: right;
+      padding-top: 80px;
+      padding-right: 24px;
+
+      & h1 {
+        font-size: 1.5rem;
+      }
+    }
+
+    & div.container-data-information {
+      display: none;
+    }
+
+    & div.container-form {
+      & form {
+        margin: 3vh 1vh 3vh 1vh;
+      }
+    }
+  }
+}
+
+/* For devices 701px and larger: */
+@media only screen and (min-device-width: 701px) {
+  section {
+    &#section-body-login {
+      height: 80vh;
+    }
+
+    & div.container-background-title {
+      text-align: left;
+      padding-top: 48px;
+      padding-left: 32px;
+
+      & h1 {
+        font-size: 2.5rem;
+      }
+    }
+
+    & div.container-form {
+      & form {
+        margin: 3vh 6vh 3vh 6vh;
+      }
+    }
+  }
+}
