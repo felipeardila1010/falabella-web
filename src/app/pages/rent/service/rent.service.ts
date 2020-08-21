@@ -31,11 +31,11 @@ export class RentService {
         request,
         {headers: this.headers}
       ).toPromise()
-        .then(response => {
-
+        .then(() => {
+          resolve(true);
         })
         .catch(error => {
-
+          reject(error);
         });
     });
   }
