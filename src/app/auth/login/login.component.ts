@@ -1,6 +1,7 @@
 import {Component, OnInit} from '@angular/core';
 import {FormControl, FormGroup, Validators} from '@angular/forms';
 import {Router} from '@angular/router';
+import {ParamsModel} from './enum/params.enum';
 
 @Component({
   selector: 'app-login',
@@ -34,7 +35,13 @@ export class LoginComponent implements OnInit {
     this.isSubmit = true;
     if (this.loginForm.valid) {
       console.log('pass form');
-      this.router.navigate(['/renta']);
+
+      const params: ParamsModel = {
+        rut: this.loginForm.controls.rut.value,
+        cellphone: this.loginForm.controls.cellphone.value,
+        email: this.loginForm.controls.email.value
+      };
+      this.router.navigate(['/renta'], {queryParams: params});
     } else {
       console.warn('LoginForm: Data not valid');
     }

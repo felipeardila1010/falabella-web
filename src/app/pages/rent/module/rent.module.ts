@@ -4,6 +4,7 @@ import {RentComponent} from '../rent.component';
 import {RentRoutingModule} from './rent-routing.module';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import {HeaderModule} from '../../../components/core/header/module/header.module';
+import {RentService} from '../service/rent.service';
 
 @NgModule({
   declarations: [
@@ -15,6 +16,9 @@ import {HeaderModule} from '../../../components/core/header/module/header.module
     FormsModule,
     ReactiveFormsModule,
     HeaderModule,
+  ],
+  providers: [
+    RentService
   ]
 })
 export class RentModule {
